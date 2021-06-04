@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:SlideToUnlock"
+             x:Class="SlideToUnlock.MainPage">
+
+    <StackLayout Margin="40">
+        <local:SlideToUnlockControl x:Name="SlideToUnlock" HeightRequest="50" SlideCompleted="Handle_SlideCompleted" SlideStarted="SlideToUnlockControl_SlideStarted">
+            <local:SlideToUnlockControl.Thumb>
+                <Frame CornerRadius="10" HasShadow="false" BackgroundColor="Silver" Padding="0">
+                    <Image Source="phone.png" HorizontalOptions="Center" VerticalOptions="Center" HeightRequest="40" WidthRequest="40" />
+                </Frame>
+            </local:SlideToUnlockControl.Thumb>
+
+            <local:SlideToUnlockControl.TrackBar>
+                <Frame CornerRadius="10" HasShadow="false" BackgroundColor="Gray" Padding="0">
+                    <Label x:Name="TrackBarLabel" Text="Slide to Call" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" />
+                </Frame>
+            </local:SlideToUnlockControl.TrackBar>
+
+            <!--<local:SlideToUnlockControl.HangupButton>
+                <Frame CornerRadius="10" HasShadow="false" BackgroundColor="Gray" Padding="0">
+                    <Button Clicked="HangupButton_Clicked" x:Name="HangupButton" TextColor="Black" Text="" BackgroundColor="#7b9dbb"  HorizontalOptions="Fill"  VerticalOptions="Fill" ></Button>
+                </Frame>
+            </local:SlideToUnlockControl.HangupButton>-->
+        </local:SlideToUnlockControl>
+    </StackLayout>
+
+</ContentPage>
